@@ -62,7 +62,7 @@ public class ClassesControllerTest {
         ClassDTO classDTO = new ClassDTO("Test class", startDate, endDate, 10);
         classDTOList.add(classDTO);
 
-        when(classService.createClassList(any(List.class))).thenReturn(Optional.empty());
+        when(classService.createClassList(classDTOList)).thenReturn(Optional.empty());
         StringBuilder stringBuilder = new StringBuilder("/api/v1/classes");
         mvc.perform(MockMvcRequestBuilders.post(stringBuilder.toString())
                 .contentType(MediaType.APPLICATION_JSON_VALUE)

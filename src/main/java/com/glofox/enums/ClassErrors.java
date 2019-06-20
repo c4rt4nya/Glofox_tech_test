@@ -10,7 +10,7 @@ public enum ClassErrors {
 
     private final String description;
 
-    private ClassErrors(String description) {
+    ClassErrors(String description) {
         this.description = description;
     }
 

@@ -22,8 +22,8 @@ public class ClassesServiceTest {
     public void testCreateClass() {
         List<ClassDTO> classDTOList = new ArrayList<>();
         classDTOList.add(getMockClassDTO());
-
-        assert classService.createClassList(classDTOList).equals(Optional.empty());
+        Optional<List<String>> optionalList = classService.createClassList(classDTOList);
+        assert optionalList != null && optionalList.isPresent();
     }
 
     @Test
