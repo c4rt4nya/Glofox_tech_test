@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "30acc443-93c2-46c1-b24f-bed8ab298d77",
+		"name": "Glofox_tech_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all the classes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/classes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"classes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new  classes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[  \n  {  \n    \"className\":\"First class\",\n    \"startDate\":\"2019-12-01\",\n    \"endDate\":\"2019-12-20\",\n    \"capacity\":10\n  },\n    {  \n    \"className\":\"Second Class\",\n    \"startDate\":\"2019-12-01\",\n    \"endDate\":\"2019-12-20\",\n    \"capacity\":10\n  }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/classes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"classes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book a class",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n  \"memberName\":\"Sergi\",\n  \"className\":\"First class\",\n  \"classDate\":\"2019-12-20\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
